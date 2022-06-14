@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <script defer th:src="@{/js/baseLoot.js}"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
+    <title>Base and Vault - Frostgrave Companion</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <div th:replace="~{fragments/nav :: nav}"></div>
+    </header>
+    <main class="my-4">
+<!-- Main Header -->
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <h1>Base and Vault</h1>
+                        <p>Manage your Base, add upgrades, and store items and gold in your Vault</p>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+            </div>
+        </div>
+<!-- Base and Selection -->
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <h3>Base</h3>
+                        <h5>Select your Base:</h5>
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <div id="base-select-div">
+                            <select id="base-select">
+                                <option value="inn">Inn</option>
+                                <option value="temple">Temple</option>
+                                <option value="crypt">Crypt</option>
+                                <option value="tower">Tower</option>
+                                <option value="treasury">Treasury</option>
+                                <option value="brewery">Brewery</option>
+                                <option value="library">Library</option>
+                                <option value="laboratory">Laboratory</option>
+                            </select>
+                            <p id="baseDesc"></p>
+                    </div>
+                    <div class="col-1"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- Resources -->
+        <div class="row">
+            <div id="base-resource-div" class = "container">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <h5>Base Resources:</h5>
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+                <div class="container">
+                    <table id="resource-table" class="table">
+                        <div class="row">
+                            <thead>
+                                <div class="col-1"></div>
+                                <div class="col-10">
+                                    <th>Resource</th>
+                                    <th>Effects</th>
+                                    <th>Cost</th>
+                                </div>
+                                <div class="col-1"></div>
+                            </thead>
+                        </div>
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10">
+                                <tbody  id = "base-resource-table-body">
+                                </tbody>
+                            </div>
+                            <div class="col-1"></div>
+
+                        </div>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <select id="base-resource">
+                            <option value="kennel">Kennel</option>
+                            <option value="giantCauldron">Giant Cauldron</option>
+                            <option value="enchanterWorkshop">Enchanter's Workshop</option>
+                            <option value="crystalBall">Crystal Ball</option>
+                            <option value="scriptorium">Scriptorium</option>
+                            <option value="celestialTelescope">Celestial Telescope</option>
+                            <option value="summoningCircle">Summoning Circle</option>
+                            <option value="carrierPigeons">Carrier Pigeons</option>
+                            <option value="arcanCandle">Arcane Candle</option>
+                            <option value="summoningCandle">Summoning Candle</option>
+                            <option value="sarcophagusOfHealing">Sarcophagus of Healing</option>
+                        </select>
+                        <button id="upgradeButton">Add</button>
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+            </div>
+        </div>
+<!-- Vault -->
+        <div class="row">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        <h3>Vault</h3>
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                        Gold Crowns: <input type="text" style="width: 25%" placeholder="0" id="gc">
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-8">
+                        Items: <textarea class="form-control" rows="1" placeholder="Scrolls, Grimoires, potions, etc."></textarea>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <div th:replace="~{fragments/footer :: foot}"></div>
+    </div>
+</footer>
+</html>

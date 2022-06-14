@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <!--    custom js script here-->
+    <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
+    <title>Home - Frostgrave Companion</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <div th:replace="~{fragments/nav :: nav}"></div>
+    </header>
+    <main class="my-4">
+        <div class="container text-justify">
+<!--Intro-->
+            <div class="row">
+                <h1>Frostgrave Companion</h1>
+                <p>Welcome to Frostgrave Companion. Here you can assemble your warband and use it in your battles in the frozen city.</p>
+            </div>
+<!--Login-->
+            <div class="row">
+                <div class="col md-5">
+                        <img src="../static/images/frostgraveLogo.png" th:src="@{images/frostgraveLogo.png}" class="rounded img-fluid"  alt="frostgrave logo">
+                </div>
+                <div  class="col">
+                    <form th:action="@{/doLogin}" method ="post" id ="form">
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" placeholder="Enter Email" name="email" id="email" min required> <br>
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" id="password" required> <br>
+                        <button id="login">Login</button> <br>
+                        <a th:href="@{/register}">Register?</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+<!-- Gallery Pictures -->
+        <div class="container">
+            <div class="row text-center">
+                <h3>Gallery</h3>
+            </div>
+            <div class="row">
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-1.jpg" th:src="@{images/fg-1.jpg}" alt="frostgrave warband"></div>
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-3.jpg" th:src="@{images/fg-3.jpg}" alt="frostgrave battle"></div>
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-2.jpg" th:src="@{images/fg-2.jpg}" alt="frostgrave gameplay"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-4.jpg" th:src="@{images/fg-4.jpg}" alt="frostgrave gameplay"></div>
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-5.jpg" th:src="@{images/fg-5.jpg}" alt="frostgrave cinematic"></div>
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-6.jpg" th:src="@{images/fg-6.jpg}" alt="frostgrave table"></div>
+            </div>
+            <div class="row">
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-7.jpg" th:src="@{images/fg-7.jpg}" alt="frostgrave battle on stairs"></div>
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-8.jpg" th:src="@{images/fg-8.jpg}" alt="frostgrave terrain"></div>
+                <div class="col-4"><img class="rounded img-fluid" src="../static/images/fg-9.jpg" th:src="@{images/fg-9.jpg}" alt="frostgrave construct"></div>
+            </div>
+        </div>
+    </main>
+</body>
+<footer class="footer mt-auto py-3">
+    <div th:replace="~{fragments/footer :: foot}"></div>
+</footer>
+</html>

@@ -1,2 +1,2 @@
 # davidlein.frostgravecompanion.capstone
-frsotgrave companion app campstone
+frsotgrave companion app capstone

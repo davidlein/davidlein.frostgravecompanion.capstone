@@ -1,8 +1,10 @@
 package com.davidlein.frostgravecompanion;
 
 import com.davidlein.frostgravecompanion.models.School;
+import com.davidlein.frostgravecompanion.models.Soldier;
 import com.davidlein.frostgravecompanion.models.User;
 import com.davidlein.frostgravecompanion.repositories.SchoolRepository;
+import com.davidlein.frostgravecompanion.repositories.SoldierRepository;
 import com.davidlein.frostgravecompanion.repositories.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,8 @@ public class RepositoryTests
     private UserRepository userRepo;
     @Autowired
     private SchoolRepository schoolRepo;
+    @Autowired
+    private SoldierRepository soldierRepo;
 
     @Autowired
     private TestEntityManager entityManager;
@@ -59,11 +63,21 @@ public class RepositoryTests
         assertThat(user).isNotNull();
     }
     @Test
-    public void testFindAll()
+    public void testFindAllSchools()
     {
         List<School> school = schoolRepo.findAll();
         assertThat(school).isNotNull();
         System.out.println(school);
+    }
+
+    @Test
+    public void testFindAllSoldiers()
+    {
+        List<Soldier> soldier = soldierRepo.findAll();
+        assertThat(soldier).isNotNull();
+        System.out.println(soldier.get(0));
+        System.out.println(soldier.get(1));
+        System.out.println(soldier);
     }
 
 

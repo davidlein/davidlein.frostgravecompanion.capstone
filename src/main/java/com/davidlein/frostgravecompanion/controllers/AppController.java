@@ -1,16 +1,20 @@
 package com.davidlein.frostgravecompanion.controllers;
 
-import com.davidlein.frostgravecompanion.models.School;
-import com.davidlein.frostgravecompanion.models.User;
+import com.davidlein.frostgravecompanion.models.*;
 import com.davidlein.frostgravecompanion.repositories.UserRepository;
+import com.davidlein.frostgravecompanion.repositories.WarbandRepository;
+import com.davidlein.frostgravecompanion.repositories.WizardRepository;
 import com.davidlein.frostgravecompanion.services.SpellService;
+import com.davidlein.frostgravecompanion.services.WizardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -20,7 +24,13 @@ public class AppController
     @Autowired
     SpellService spellService = new SpellService();
     @Autowired
-    private UserRepository repo;
+    WizardService wizardService = new WizardService();
+    @Autowired
+    private UserRepository userRepo;
+    @Autowired
+    private WizardRepository wizRepo;
+    @Autowired
+    private WarbandRepository warbandRepo;
 
     @GetMapping("")
     public String viewStartPage()
@@ -33,26 +43,36 @@ public class AppController
         return "index";
     }
     @GetMapping("/warband")
-    public String viewWarband(Model model)
+    public ModelAndView warband()
     {
-        List<School> schools = spellService.getSchools();
-        model.addAttribute("schools", schools);
-        return "warband";
+        ModelAndView mav = new ModelAndView("warband");
+        List<Warband> warbandList = wizardService.getWarband(wizardService.getPrincipal());
+        mav.addObject("warbands",warbandList);
+        return mav;
+    }
+    @GetMapping("/warband_creator")
+    public ModelAndView addWarbandMember(Model model)
+    {
+        List<Soldier> soldiers = wizardService.getSoldiers();
+        model.addAttribute("soldiers", soldiers);
+
+        User currentUser = wizardService.getPrincipal();
+        model.addAttribute("currentUser", currentUser);
+        ModelAndView mav = new ModelAndView("warband_creator");
+        Warband newWarbandMember = new Warband();
+        mav.addObject("warbands",newWarbandMember);
+        return mav;
+    }
+    @PostMapping("/save_member")
+    public String saveMember(@ModelAttribute Warband warband)
+    {
+        warbandRepo.save(warband);
+        return "redirect:/warband";
     }
     @GetMapping("/base_vault")
     public String viewBaseVault()
     {
         return "base_vault";
-    }
-    @GetMapping("/warband_select")
-    public String viewWarbandSelect()
-    {
-        return "warband_select";
-    }
-    @GetMapping("/warband_creator")
-    public String viewWarbandCreator()
-    {
-        return "warband_creator";
     }
     @GetMapping("/venture_forth")
     public String viewVentureForth()
@@ -71,7 +91,7 @@ public class AppController
         BCryptPasswordEncoder encoder =new BCryptPasswordEncoder();
         String encodedPassword = encoder.encode(user.getPassword());
         user.setPassword(encodedPassword);
-        repo.save(user);
+        userRepo.save(user);
         return "register_success";
     }
 }

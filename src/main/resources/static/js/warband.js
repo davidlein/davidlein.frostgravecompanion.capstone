@@ -75,7 +75,7 @@ function addSoldier()
         
     }
     let specialistBool =false
-    if(soldierObj[soldierVal].specialist==true)
+    if(soldierObj[soldierVal].specialist===true)
     {
         specialistBool= "Yes"
     }else specialistBool = "No"

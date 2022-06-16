@@ -9,17 +9,17 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
 
 import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-public class WebSecurityConfig extends WebSecurityConfigurerAdapter
+public class WebSecurityConfig
 {
-    @Autowired
-    private DataSource dataSource;
 
     @Bean
     public UserDetailsService userDetailsService()
@@ -41,22 +41,23 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
         return authenticationProvider;
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception
+    @Bean
+    public WebSecurityCustomizer webSecurityCustomizer() throws Exception
     {
-        auth.authenticationProvider(authenticationProvider());
+        return (web) -> web.ignoring().antMatchers("/images/**", "/js/**","/webjars/**");
     }
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception
+    @Bean
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception
     {
         http.authorizeRequests()
-                .antMatchers("/warband","/base_vault","/warband_select","/warband_creator","/venture_forth").authenticated()
+                .antMatchers("/warband","/base_vault","/warband_creator","/venture_forth").authenticated()
                 .anyRequest().permitAll()
                 .and()
-                .formLogin().usernameParameter("email").defaultSuccessUrl("/warband_select").permitAll().loginPage("/home")
+                .formLogin().usernameParameter("email").defaultSuccessUrl("/warband").permitAll().loginPage("/home")
                 .loginProcessingUrl("/doLogin")
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/").permitAll();
+        return http.build();
     }
 }

@@ -6,151 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
-    <script defer th:src="@{/js/warband.js}"></script>
+<!--    <script defer th:src="@{/js/warband.js}"></script>-->
     <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
     <title>Warband Builder - Frostgrave Companion</title>
 </head>
-<!-- for now wizard input is manual. full version should import from other pages/database -->
-<body class="d-flex flex-column min-vh-100">
-    <header>
-        <div th:replace="~{fragments/nav :: nav}"></div>
-    </header>
-    <main class="container my-3">
-<!-- Warband Builder -->
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="container-fluid col-10"> 
-            <h1>Warband Builder</h1>
-            <p>Fill out your wizard with the information on your wizard sheet. Then, to populate your soldiers, select it from the drop down and press "add".</p>
-            </div>
-            <div class="col-1"></div>
-        </div>
-<!-- Wizard Table -->
-        <div class="row">
-            <div class="col-1"></div>
-            <div class ="container-fluid">
-                <table id="wizard" class ="table">
-                    <tr>
-                        <td>Wizard:</td>
-                        <td colspan="5"><input type="text" size="25" class="inputName" placeholder="enter name"></td>
-                        <td>Level</td>
-                        <td colspan="3"><input type="text" class="stat" placeholder="0"></td>
-                        <td >School:</td>
-                        <td>
-                            <select>
-                                <option th:each ="school : ${schools}"
-                                th:value="${school.schoolId}"
-                                th:text="${school.school}"/>
-                            </select>
-                        </td>
+<header>
+    <div th:replace="~{fragments/nav :: nav}"></div>
+</header>
+<body>
+<h2>Warband</h2>
+<hr>
+<a class="btn btn-primary m-2" th:href="@{/warband_creator}">Add Member</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Member</th>
+            <th>Move</th>
+            <th>Fight</th>
+            <th>Shoot</th>
+            <th>Armour</th>
+            <th>Will</th>
+            <th>Health</th>
+            <th>Notes</th>
+            <th>Specialist</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="warbands:${warbands}">
+            <td th:text="${warbands.type}"></td>
+            <td th:text="${warbands.move}"></td>
+            <td th:text="${warbands.fight}"></td>
+            <td th:text="${warbands.shoot}"></td>
+            <td th:text="${warbands.armour}"></td>
+            <td th:text="${warbands.will}"></td>
+            <td th:text="${warbands.health}"></td>
+            <td th:text="${warbands.notes}"></td>
+            <td th:text="${warbands.specialist}"></td>
+        </tr>
+    </tbody>
 
-                    </tr>
-                    <tr>
-                        <td>Move</td>
-                        <td>Fight</td>
-                        <td>Shoot</td>
-                        <td>Armour</td>
-                        <td>Will</td>
-                        <td>Health</td>
-                        <td>Experience</td>
-                        <td>0</td>
-                        <td><button>+10</button></td>
-                        <td><button>+5</button></td>
-                        <td><button>-5</button></td>
-                        <td><button>-10</button></td>
-                    </tr>
-                    <tr>
-                        <td><input id="wizMove" class="stat" placeholder="6&quot;"></td>
-                        <td><input id="wizFight" class="stat" placeholder="+2"></td>
-                        <td><input id="wizShoot" class="stat" placeholder="+0"></td>
-                        <td><input id="wizArmour" class="stat" placeholder="10"></td>
-                        <td><input id="wizWill" class="stat" placeholder="+4"></td>
-                        <td><input id="wizHealth" class="stat" placeholder="14"></td>
-                        <td>Current Health:</td>
-                        <td id="wizCurrHealth" class="currHealth table-active"></td>
-                        <td><button>+1</button></td>
-                        <td><button>-1</button></td>
-                    </tr>
-                    <tr>
-                        <td colspan="8">Items and Notes</td>
-                    </tr>
-                    <tr>
-                        <td colspan="8"><textarea class="form-control" rows="1" placeholder="Wizard's items and notes"></textarea></td>
-                    </tr>
-                </table>
-            
-            </div>
-        </div>
-<!-- Apprentice Table -->
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="container-fluid">
-                <div class="container-fluid">
-                    <table id="apprentice" class ="table">
-                        <tr>
-                            <td>Apprentice:</td>
-                            <td colspan="5"><input type="text" size="25" class="inputName" placeholder="enter name"></td>
-                        </tr>
-                        <tr>
-                            <td>Move</td>
-                            <td>Fight</td>
-                            <td>Shoot</td>
-                            <td>Armour</td>
-                            <td>Will</td>
-                            <td>Health</td>
-                            <td colspan="3">Current Health</td>
-                        </tr>
-                        <tr>
-                            <td id="appMove"></td>
-                            <td id="appFight"></td>
-                            <td id="appShoot"></td>
-                            <td id="appArmour"></td>
-                            <td id="appWill"></td>
-                            <td id="appHealth"></td>
-                            <td id="appCurrHealth" class="currHealth table-active"></td>
-                            <td><button>+1</button></td>
-                            <td><button>-1</button></td>
-                        </tr>
-                        <tr>
-                            <td colspan="8" class="col-4">Items and Notes</td>
-                        </tr>
-                        <tr>
-                            <td colspan="6"><textarea class="form-control" rows="1" placeholder="Apprentice's items and notes"></textarea></td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </div>
-<!-- Soldiers -->
-        <div class="row">
-            <div class="col-1"></div>
-            <div class="col-6">
-                <div class = "container-fluid" id="soldier-table-div"></div>
-                <div class="container-fluid">
-                    <span>Choose Soldier:</span>
-                    <select id="soldier-select">
-                        <option value="thug">Thug</option>
-                        <option value="thief">Thief</option>
-                        <option value="warHound">War Hound</option>
-                        <option value="infantryman">Infantryman</option>
-                        <option value="manAtArms">Man-at-Arms</option>
-                        <option value="apothecary">Apothecary</option>
-                        <option value="archer">Archer</option>
-                        <option value="crossbowman">Crossbowman</option>
-                        <option value="treasureHunter">Treasure Hunter</option>
-                        <option value="tracker">Tracker</option>
-                        <option value="knight">Knight</option>
-                        <option value="templar">Templar</option>
-                        <option value="ranger">Ranger</option>
-                        <option value="barbarian">Barbarian</option>
-                        <option value="marksman">Marksman</option>
-                    </select>
-                    <button id="soldier-submit">Add</button>
-                </div>
-            </div>
-            <div class="col-5"></div>
-        </div>
-    </main>
+</table>
 </body>
 <footer class="footer mt-auto py-3">
     <div class="container">

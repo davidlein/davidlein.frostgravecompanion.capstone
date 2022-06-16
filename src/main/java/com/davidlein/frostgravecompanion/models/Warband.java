@@ -12,22 +12,42 @@ public class Warband
 {
     @Id
     @Column(name="warband_id")
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long warbandId;
 
     @ManyToOne
     @JoinColumn (name="user_id_fk",referencedColumnName = "user_id")
     private User userId;
 
-    @ManyToOne
-    @JoinColumn (name="wizard_id_fk",referencedColumnName = "wizard_id")
-    private Wizard wizardId;
+    @Column(name="type")
+    private String type;
 
-    @ManyToMany(targetEntity = Soldier.class)
-    @JoinTable(	name = "warband_soldier", joinColumns = { @JoinColumn(name = "warband_id") },
-            inverseJoinColumns = { @JoinColumn(name = "soldier_id") })
-    private List<Soldier> soldiers;
+    @Column (name="move")
+    private Long move;
 
+    @Column(name="fight")
+    private String fight;
 
+    @Column(name="shoot")
+    private String shoot;
+
+    @Column(name="armour")
+    private Long armour;
+
+    @Column(name="will")
+    private String will;
+
+    @Column(name="health")
+    private Long health;
+
+    @Column(name="cost")
+    private Long cost;
+
+    @Column(name="notes")
+    private String notes;
+
+    @Column(name="specialist")
+    private Boolean specialist;
 
 
 }

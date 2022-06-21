@@ -3,38 +3,27 @@ package com.davidlein.frostgravecompanion.models;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Data
 @Entity
-@Table(name="wizard")
-public class Wizard
+@Table(name="apprentice")
+public class Apprentice
 {
     @Id
-    @Column(name="wizard_id")
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long wizardId;
-
+    @Column(name="apprentice_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long apprenticeId;
 
     @ManyToOne
     @JoinColumn (name="user_id_fk",referencedColumnName = "user_id")
     private User userId;
 
-    @Column(name="wiz_name")
-    private String wizName;
 
-    @Column(name="school")
-    private String school;
+    @Column(name="apprentice_name")
+    private String appName;
 
-    @Column(name="xp")
-    private Long xp;
-
-    @Column(name="level")
-    private Long level;
-
-    @Column(name="treasury")
-    private Long treasury;
-
+    @Column(name="notes")
+    private String notes;
     @Column (name="move")
     private Long move;
 
@@ -52,8 +41,4 @@ public class Wizard
 
     @Column(name="health")
     private Long health;
-
-    @Column(name="notes")
-    private String notes;
-
 }

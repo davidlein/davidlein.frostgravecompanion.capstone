@@ -16,7 +16,70 @@
 <body>
 <h2>Warband</h2>
 <hr>
+<a class="btn btn-primary m-2" th:href="@{/wizard_creator}">New Wizard</a>
+<a class="btn btn-primary m-2" th:href="@{/apprentice_creator}">New Apprentice</a>
 <a class="btn btn-primary m-2" th:href="@{/warband_creator}">Add Member</a>
+<h3>Wizard and Apprentice</h3>
+<hr>
+<table class="table table-striped">
+    <thead>
+        <th>Name</th>
+        <th>School</th>
+        <th>Move</th>
+        <th>Fight</th>
+        <th>Shoot</th>
+        <th>Armour</th>
+        <th>Will</th>
+        <th>Health</th>
+        <th>XP</th>
+        <th>Level</th>
+        <th>Treasury</th>
+        <th>Notes</th>
+        <th>Actions</th>
+    </thead>
+    <tbody>
+        <tr th:each="wizard:${wizard}">
+            <td th:text="${wizard.wizName}"></td>
+            <td th:text="${wizard.school}"></td>
+            <td th:text="${wizard.move}"></td>
+            <td th:text="${wizard.fight}"></td>
+            <td th:text="${wizard.shoot}"></td>
+            <td th:text="${wizard.armour}"></td>
+            <td th:text="${wizard.will}"></td>
+            <td th:text="${wizard.health}"></td>
+            <td th:text="${wizard.xp}"></td>
+            <td th:text="${wizard.level}"></td>
+            <td th:text="${wizard.treasury}"></td>
+            <td th:text="${wizard.notes}"></td>
+            <td>
+                <a th:href="@{/updateWizard(wizardId= ${wizard.wizardId})}" class = "btn btn-info ml-2">Update</a>
+                <a th:href="@{/removeWizard(wizardId = ${wizard.wizardId})}" class="btn btn-danger ml-2">Remove</a>
+            </td>
+
+
+        </tr>
+        <tr th:each="apprentice:${apprentice}">
+            <td th:text="${apprentice.appName}"></td>
+            <td>-</td>
+            <td th:text="${apprentice.move}"></td>
+            <td th:text="${apprentice.fight}"></td>
+            <td th:text="${apprentice.shoot}"></td>
+            <td th:text="${apprentice.armour}"></td>
+            <td th:text="${apprentice.will}"></td>
+            <td th:text="${apprentice.health}"></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td th:text="${apprentice.notes}"></td>
+            <td>
+                <a th:href="@{/updateApprentice(apprenticeId = ${apprentice.apprenticeId})}" class = "btn btn-info ml-2">Update</a>
+                <a th:href="@{/removeApprentice(apprenticeId = ${apprentice.apprenticeId})}" class="btn btn-danger ml-2">Remove</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<h3>Soldiers</h3>
+<hr>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -43,6 +106,7 @@
             <td th:text="${warbands.health}"></td>
             <td th:text="${warbands.notes}"></td>
             <td th:text="${warbands.specialist}"></td>
+            <td><a th:href="@{/removeMember(warbandId = ${warbands.warbandId})}" class="btn btn-danger ml-2">Remove</a> </td>
         </tr>
     </tbody>
 

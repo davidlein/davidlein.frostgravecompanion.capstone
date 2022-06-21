@@ -1,11 +1,7 @@
 package com.davidlein.frostgravecompanion;
 
-import com.davidlein.frostgravecompanion.models.School;
-import com.davidlein.frostgravecompanion.models.Soldier;
-import com.davidlein.frostgravecompanion.models.User;
-import com.davidlein.frostgravecompanion.repositories.SchoolRepository;
-import com.davidlein.frostgravecompanion.repositories.SoldierRepository;
-import com.davidlein.frostgravecompanion.repositories.UserRepository;
+import com.davidlein.frostgravecompanion.models.*;
+import com.davidlein.frostgravecompanion.repositories.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -29,6 +25,12 @@ public class RepositoryTests
     private SchoolRepository schoolRepo;
     @Autowired
     private SoldierRepository soldierRepo;
+    @Autowired
+    private ApprenticeRepository appRepo;
+    @Autowired
+    private WizardRepository wizRepo;
+    @Autowired
+    private WarbandRepository warRepo;
 
     @Autowired
     private TestEntityManager entityManager;
@@ -79,6 +81,34 @@ public class RepositoryTests
         System.out.println(soldier.get(1));
         System.out.println(soldier);
     }
+    @Test
+    public void testFindApprentice()
+    {
+        User user = new User();
+        user.setUserId(8L);
+        List<Apprentice> apprentice = appRepo.findAllByUserId(user);
+        assertThat(apprentice).isNotNull();
+        System.out.println(apprentice);
+    }
+    @Test
+    public void testFindWizard()
+    {
+        User user = new User();
+        user.setUserId(8L);
+        List<Wizard> wizard = wizRepo.findAllByUserId(user);
+        assertThat(wizard).isNotNull();
+        System.out.println(wizard);
+    }
+    @Test
+    public void testFindWarband()
+    {
+        User user = new User();
+        user.setUserId(8L);
+        List<Warband> warband = warRepo.findAllByUserId(user);
+        assertThat(warband).isNotNull();
+        System.out.println(warband);
+    }
+
 
 
 

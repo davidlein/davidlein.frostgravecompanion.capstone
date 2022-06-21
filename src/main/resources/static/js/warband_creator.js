@@ -16,9 +16,7 @@ class soldier
     }
 
 }
-//Wizard and Apprentice
-const wizard = new soldier(16, "Wizard","6","+2","+0","10","+4","14","0",[""],false)
-const apprentice = new soldier(17, "Apprentice","6","+0","+0","10","+2","12","100",[""],false)
+
 //standard soldiers
 const thug = new soldier(1,"Thug", "6","+2","+0","10","-1","10","0",["Hand Weapon"],false)
 const thief = new soldier(2,"Thief", "7","+1","+0","10","+0","10","0",["Dagger"],false)
@@ -39,7 +37,7 @@ const marksman = new soldier(15,"Marksman", "5","+2","+2","12","+1","12","125",[
 
 //When the person presses the "soldier-submit" button. Take the value of "soldier-select" and build a table with the information contained within
 
-let soldierObj ={wizard,apprentice,thug,thief,warhound, infantryman, manatarms, apothecary, archer, crossbowman, treasurehunter, tracker, knight, templar, ranger, barbarian, marksman}
+let soldierObj ={thug,thief,warhound, infantryman, manatarms, apothecary, archer, crossbowman, treasurehunter, tracker, knight, templar, ranger, barbarian, marksman}
 
 document.getElementById("soldier-select-view").addEventListener("change",soldierSelectChange)
 const inputType = document.getElementById("input-type")

@@ -1,10 +1,7 @@
 package com.davidlein.frostgravecompanion.services;
 
 import com.davidlein.frostgravecompanion.models.*;
-import com.davidlein.frostgravecompanion.repositories.SoldierRepository;
-import com.davidlein.frostgravecompanion.repositories.WarbandRepository;
-import com.davidlein.frostgravecompanion.repositories.WizardRepository;
-import com.davidlein.frostgravecompanion.repositories.UserRepository;
+import com.davidlein.frostgravecompanion.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -25,7 +22,9 @@ public class WizardService implements UserDetailsService
     @Autowired
     private WarbandRepository warbandRepo;
     @Autowired
-    private WizardRepository wizardRepo;
+    private WizardRepository wizRepo;
+    @Autowired
+    private ApprenticeRepository appRepo;
 
 
     @Override
@@ -52,6 +51,20 @@ public class WizardService implements UserDetailsService
         List<Warband> warbandList = new ArrayList<>();
         warbands.forEach(warbandList::add);
         return warbandList;
+    }
+    public List<Wizard> getWizard(User userId)
+    {
+        Iterable<Wizard> wizard = wizRepo.findAllByUserId(userId);
+        List<Wizard> wizList = new ArrayList<>();
+        wizard.forEach(wizList::add);
+        return wizList;
+    }
+    public List<Apprentice> getApprentice(User userId)
+    {
+        Iterable<Apprentice> apprentice = appRepo.findAllByUserId(userId);
+        List<Apprentice> appList = new ArrayList<>();
+        apprentice.forEach(appList::add);
+        return appList;
     }
     public List<Soldier> getSoldiers()
     {

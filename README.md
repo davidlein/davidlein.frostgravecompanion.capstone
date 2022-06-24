@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 # davidlein.frostgravecompanion.capstone
-frsotgrave companion app capstone
+frostgrave companion app capstone
 =======
 # davidlein.frostgravecompanion.capstone
 frostgrave companion app capstone

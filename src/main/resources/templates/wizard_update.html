@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
+
+  <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
+  <title>Update Wizard - Frostgrave Companion</title>
+</head>
+<header>
+  <div th:replace="~{fragments/nav :: nav}"></div>
+</header>
+<body>
+<div class="container">
+  <h2>Update Wizard</h2>
+  <hr/>
+  <div class = "container">
+      <form th:action="@{/save_wizard}" th:object="${wizard}" method="POST" >
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="wiz-name-id">Wizard Name:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{wizName}" type="text" id="wiz-name-id" readonly>
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-school">School:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{school}" type="text" readonly id="input-school">
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-move">Move:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{move}" type="text" readonly id="input-move">
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-fight">Fight:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{fight}" type="text"  id="input-fight">
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-shoot">Shoot:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{shoot}" type="text"  id="input-shoot">
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-armour">Armour:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{armour}" type="text" readonly id="input-armour">
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-will">Will:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{will}" type="text" id="input-will">
+            </div>
+        </div>
+        <div class = "row mb-1">
+            <label class="col-sm-2 col-form-label" for="input-health">Health:</label>
+            <div class ="col-sm-4" >
+              <input th:field="*{health}" type="text" id="input-health">
+            </div>
+        </div>
+        <div class = "row mb-1">
+          <label class="col-sm-2 col-form-label" for="wiz-notes-id">Wizard Arms:</label>
+          <div class ="col-sm-4" >
+            <input th:field="*{notes}" type="text" id="wiz-notes-id">
+          </div>
+        </div>
+        <div class = "row mb-1">
+          <label class="col-sm-2 col-form-label" for="input-xp">Experience:</label>
+          <div class ="col-sm-4" >
+            <input th:field="*{xp}" type="text"  id="input-xp">
+          </div>
+        </div>
+        <div class = "row mb-1">
+          <label class="col-sm-2 col-form-label" for="input-level">Level:</label>
+          <div class ="col-sm-4" >
+            <input th:field="*{level}" type="text" id="input-level">
+          </div>
+        </div>
+        <div class = "row mb-1">
+          <label class="col-sm-2 col-form-label" for="input-treasury">Treasury:</label>
+          <div class ="col-sm-4" >
+            <input th:field="*{treasury}" type="text" id="input-treasury">
+          </div>
+        </div>
+        <div>
+          <input th:field="${currentUser.userId}" type="text" hidden>
+          <input type="hidden" th:field="*{wizardId}"/>
+        </div>
+        <hr>
+        <button class="btn btn-primary m-2" type="submit">Update Wizard</button>
+          <a th:href="@{/warband}" class="btn btn-secondary m-2">Go Back</a>
+      </form>
+
+
+  </div>
+</div>
+</body>
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <div th:replace="~{fragments/footer :: foot}"></div>
+  </div>
+</footer>
+</html>

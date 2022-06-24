@@ -16,11 +16,19 @@ const scriptorium = new resource("Scriptorium","Confers a +1 to Casting Rolls fo
 const celestialTelescope = new resource("Celestial Telescope","Aids the wizard in divining the future. Once per game they may add +5 to an Initiative Roll before the dice have been rolled.","250gc")
 const summoningCircle = new resource("Summoning Circle","A Summoning Circle allows the wizard to attempt to summon a demon before a game, effectively adding an Out of Game (B) option to the Summon Demon and Control Demon spells (see pages 133 and 116). The wizard first attempts to cast Summon Demon, followed by Control Demon. If both spells are successful, a demon joins the warband as a temporary member per the rules for Summon Demon. This demon does not count towards the warband's maximum size. The wizard may not cast Control Demon or Summon Demon while this demon is in play.","300gc")
 const carrierPigeons = new resource("Carrier Pigeons","Carrier Pigeons allow a wizard to more easily get messages to their agents outside Frostgrave. Soldiers hired by the wizard cost 10gc less.","50gc")
+<<<<<<< HEAD
 const arcanCandle = new resource("Arcane Candle","Confers a +1 to Casting Rolls for Control Demon spells cast Out of Game","100gc")
 const summoningCandle = new resource("Summoning Candle","Confers a +1 to Casting Rolls for Summon Demon spells cast Out of Game","100gc")
 const sarcophagusOfHealing = new resource("Sarcophagus of Healing","The wizard does not have to miss a game, or pay a fee, when they are Badly Wounded, and pays 10gc less if they have any Niggling Injuries","300gc")
 
 let resourceObj = {kennel, giantCauldron,enchanterWorkshop,crystalBall,scriptorium,celestialTelescope,summoningCircle,carrierPigeons,arcanCandle,summoningCandle,sarcophagusOfHealing}
+=======
+const arcaneCandle = new resource("Arcane Candle","Confers a +1 to Casting Rolls for Control Demon spells cast Out of Game","100gc")
+const summoningCandle = new resource("Summoning Candle","Confers a +1 to Casting Rolls for Summon Demon spells cast Out of Game","100gc")
+const sarcophagusOfHealing = new resource("Sarcophagus of Healing","The wizard does not have to miss a game, or pay a fee, when they are Badly Wounded, and pays 10gc less if they have any Niggling Injuries","300gc")
+
+let resourceObj = {kennel, giantCauldron,enchanterWorkshop,crystalBall,scriptorium,celestialTelescope,summoningCircle,carrierPigeons,arcaneCandle,summoningCandle,sarcophagusOfHealing}
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 
 
 

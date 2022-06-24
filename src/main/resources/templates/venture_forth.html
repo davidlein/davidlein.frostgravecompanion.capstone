@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <script defer th:src="@{/js/venture_forth.js}"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
+    <title>Venture Forth - Frostgrave Companion</title>
+</head>
+<header >
+    <div th:replace="~{fragments/nav :: nav}"></div>
+</header>
+<body>
+<h2>Venture Forth</h2>
+<hr>
+<a th:href="@{/warband}" class="btn btn-secondary m-2">Head Home</a>
+<h3>Wizard</h3>
+<table class="table table-striped">
+    <thead>
+    <th>Name</th>
+    <th>Move</th>
+    <th>Fight</th>
+    <th>Shoot</th>
+    <th>Armour</th>
+    <th>Will</th>
+    <th>Health</th>
+    <th>XP</th>
+    <th>Notes</th>
+    <th>XP Inc/Dec</th>
+    <th>Health Inc/Dec</th>
+    </thead>
+    <tbody>
+    <tr th:each="wizard:${wizard}">
+        <td th:text="${wizard.wizName}"></td>
+        <td th:text="${wizard.move}"></td>
+        <td th:text="${wizard.fight}"></td>
+        <td th:text="${wizard.shoot}"></td>
+        <td th:text="${wizard.armour}"></td>
+        <td th:text="${wizard.will}"></td>
+        <td id="wizard-health" th:text="${wizard.health}"></td>
+        <td id="wizard-xp">0</td>
+        <td th:text="${wizard.notes}"></td>
+        <td>
+<!--            XP buttons-->
+            <button id="wXpUpTen">+10</button>
+            <button id="wXpUpFive">+5</button>
+            <button id="wXpDownFive">-5</button>
+            <button id="wXpDownTen">-10</button>
+        </td>
+        <td>
+<!--            health buttons-->
+            <button id="wHealthUpFive">+5</button>
+            <button id="wHealthUpOne">+1</button>
+            <button id="wHealthDownOne">-1</button>
+            <button id="wHealthDownFive">-5</button>
+        </td>
+    </tbody>
+</table>
+<hr>
+<h3>Apprentice</h3>
+<table class="table table-striped">
+    <thead>
+    <th>Name</th>
+    <th>Move</th>
+    <th>Fight</th>
+    <th>Shoot</th>
+    <th>Armour</th>
+    <th>Will</th>
+    <th>Health</th>
+    <th>Notes</th>
+    <th>Health Inc/Dec</th>
+    </thead>
+    <tbody>
+    <tr th:each="apprentice:${apprentice}">
+        <td th:text="${apprentice.appName}"></td>
+        <td th:text="${apprentice.move}"></td>
+        <td th:text="${apprentice.fight}"></td>
+        <td th:text="${apprentice.shoot}"></td>
+        <td th:text="${apprentice.armour}"></td>
+        <td th:text="${apprentice.will}"></td>
+        <td id="apprentice-health" th:text="${apprentice.health}"></td>
+        <td th:text="${apprentice.notes}"></td>
+        <td>
+<!--            health buttons-->
+            <button id="aHealthUpFive">+5</button>
+            <button id="aHealthUpOne">+1</button>
+            <button id="aHealthDownOne">-1</button>
+            <button id="aHealthDownFive">-5</button>
+        </td>
+    </tbody>
+</table>
+<hr>
+<h3>Soldiers</h3>
+<table class="table table-striped">
+    <thead>
+    <th>Type</th>
+    <th>Move</th>
+    <th>Fight</th>
+    <th>Shoot</th>
+    <th>Armour</th>
+    <th>Will</th>
+    <th>Health</th>
+    <th>Notes</th>
+    <th>Health Inc/Dec</th>
+    </thead>
+    <tbody>
+<!--    lists all of a users warband members-->
+    <tr th:each="warbands:${warbands}">
+        <td th:text="${warbands.type}"></td>
+        <td th:text="${warbands.move}"></td>
+        <td th:text="${warbands.fight}"></td>
+        <td th:text="${warbands.shoot}"></td>
+        <td th:text="${warbands.armour}"></td>
+        <td th:text="${warbands.will}"></td>
+        <td th:id="${#ids.seq('soldier-health')}" th:text="${warbands.health}"></td>
+        <td th:text="${warbands.notes}"></td>
+        <td>
+<!--            health buttons-->
+            <button th:id="${#ids.seq('sHealthUpFive')}">+5</button>
+            <button th:id="${#ids.seq('sHealthUpOne')}">+1</button>
+            <button th:id="${#ids.seq('sHealthDownOne')}">-1</button>
+            <button th:id="${#ids.seq('sHealthDownFive')}">-5</button>
+        </td>
+    </tbody>
+</table>
+</body>
+<footer class="footer mt-auto py-3">
+    <div th:replace="~{fragments/footer :: foot}"></div>
+</footer>
+</html>

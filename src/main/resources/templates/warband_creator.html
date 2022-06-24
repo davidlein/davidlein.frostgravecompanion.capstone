@@ -21,13 +21,17 @@
             <label for="soldier-select-view">View Stats: </label>
             <select id="soldier-select-view">
                 <option value="">Select Type</option>
+<<<<<<< HEAD
                 <option>Wizard</option>
                 <option>Apprentice</option>
+=======
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
                 <option
                         th:each ="soldier : ${soldiers}"
                         th:value="${soldier.soldierType}"
                         th:text="${soldier.soldierType}"/>
             </select>
+<<<<<<< HEAD
             <table>
                 <tr>
                     <td>Type:</td>
@@ -42,6 +46,28 @@
                     <td>Armour</td>
                     <td>Will</td>
                     <td>Health</td>
+=======
+            <div class="col-6">
+                <table class="table">
+                    <tr>
+                        <th>Type:</th>
+                        <th>Cost:</th>
+                    </tr>
+                    <tr>
+                        <td id="type-id"></td>
+                        <td id="cost-id"></td>
+                    </tr>
+                </table>
+            </div>
+            <table class="table">
+                <tr>
+                    <th>Move</th>
+                    <th>Fight</th>
+                    <th>Shoot</th>
+                    <th>Armour</th>
+                    <th>Will</th>
+                    <th>Health</th>
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
                 </tr>
                 <tr>
                     <td id="move-id"></td>
@@ -51,9 +77,26 @@
                     <td id="will-id"></td>
                     <td id="health-id"></td>
                 </tr>
+<<<<<<< HEAD
                 <tr>
                     <td id="notes-id"></td>
                     <td>Specialist:</td>
+=======
+            </table>
+            <table class="table">
+                <tr>
+                    <th>Notes:</th>
+                </tr>
+                <tr>
+                    <td id="notes-id"></td>
+                </tr>
+            </table>
+            <table class="table">
+                <tr>
+                    <th>Specialist:</th>
+                </tr>
+                <tr>
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
                     <td id="specialist-id"></td>
                 </tr>
             </table>
@@ -70,7 +113,13 @@
                 <input th:field="*{specialist}" type="text" hidden id="input-specialist">
                 <input th:field="${currentUser.userId}" type="text" hidden>
                 <button class="btn btn-primary" type="submit">Add Member</button>
+<<<<<<< HEAD
             </form>
+=======
+                <a th:href="@{/warband}" class="btn btn-secondary m-2">Go Back</a>
+            </form>
+
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
         </div>
 
 </div>

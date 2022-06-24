@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
+    <script defer th:src="@{/js/apprentice_creator.js}"></script>
+    <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
+    <title>Warband Creator - Frostgrave Companion</title>
+</head>
+<header >
+    <div th:replace="~{fragments/nav :: nav}"></div>
+</header>
+<body>
+<div class="container">
+    <h2>Add Wizard</h2>
+    <hr/>
+    <div>
+        <form th:action="@{/save_apprentice}" th:object="${apprentice}" method="POST">
+            <div class = "row mb-1">
+                <label for="app-name-id">Apprentice Name:</label>
+                <div class ="col-sm-4" >
+                    <input th:field="*{appName}" type="text" id="app-name-id">
+                </div>
+            </div>
+            <div class = "row mb-1">
+                <label for="app-notes-id">Apprentice Arms:</label>
+                <div class ="col-sm-4" >
+                    <input th:field="*{notes}" type="text" id="app-notes-id">
+                </div>
+            </div>
+            <!--hidden inputs that talk to the DB-->
+            <input th:field="*{move}" type="text" hidden id="input-move">
+            <input th:field="*{fight}" type="text" hidden id="input-fight">
+            <input th:field="*{shoot}" type="text" hidden id="input-shoot">
+            <input th:field="*{armour}" type="text" hidden id="input-armour">
+            <input th:field="*{will}" type="text" hidden id="input-will">
+            <input th:field="*{health}" type="text" hidden id="input-health">
+            <input th:field="${currentUser.userId}" type="text" hidden>
+            <button class="btn btn-primary" type="submit">Add Apprentice</button>
+            <a th:href="@{/warband}" class="btn btn-secondary m-2">Go Back</a>
+        </form>
+    </div>
+</div>
+</body>
+<footer class="footer mt-auto py-3">
+    <div th:replace="~{fragments/footer :: foot}"></div>
+</footer>
+</html>

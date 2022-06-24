@@ -15,6 +15,7 @@ const soothsayer = new school("Soothsayer")
 const summoner = new school("Summoner")
 const thaumaturge = new school("Thaumaturge")
 const witch = new school("Witch")
+
 let schoolObj = {chronomancer, elementalist, enchanter, illusionist, necromancer, sigilist, soothsayer, summoner, thaumaturge, witch}
 
 const inputSchool = document.getElementById("input-school")
@@ -36,6 +37,7 @@ function schoolSwitch()
     inputSchool.setAttribute("value",schoolObj[schoolVal].name)
 }
 
+// Initial value of wizard
 inputMove.setAttribute("value","6")
 inputFight.setAttribute("value","+2")
 inputShoot.setAttribute("value","+0")

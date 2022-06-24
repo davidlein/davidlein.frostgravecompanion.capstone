@@ -39,6 +39,7 @@
                     <input th:field="*{notes}" type="text" id="wiz-notes-id">
                 </div>
             </div>
+            <!--hidden inputs that talk to the DB-->
             <input th:field="*{school}" type="text" hidden id="input-school">
             <input th:field="*{move}" type="text" hidden id="input-move">
             <input th:field="*{fight}" type="text" hidden id="input-fight">
@@ -60,7 +61,3 @@
     <div th:replace="~{fragments/footer :: foot}"></div>
 </footer>
 </html>
-<div class = "row mb-1">
-    <div class ="col-sm-4" >
-    </div>
-</div>

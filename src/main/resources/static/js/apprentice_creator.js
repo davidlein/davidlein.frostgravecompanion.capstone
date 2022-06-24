@@ -1,4 +1,4 @@
-
+// Initial Values for Apprentice
 const inputMove = document.getElementById("input-move")
 const inputFight = document.getElementById("input-fight")
 const inputShoot = document.getElementById("input-shoot")

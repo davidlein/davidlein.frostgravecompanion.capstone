@@ -41,6 +41,7 @@ public class WizardService implements UserDetailsService
     {
         return userRepo.findByEmail(email);
     }
+//    primary way to get a userId and assign it when doing CRUD operations
     public User getPrincipal()
     {
         return getByEmail(SecurityContextHolder.getContext().getAuthentication().getName());

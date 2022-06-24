@@ -19,11 +19,19 @@
     <hr/>
     <div>
         <form th:action="@{/save_apprentice}" th:object="${apprentice}" method="POST">
-            <label for="app-name-id">Apprentice Name:</label>
-            <input th:field="*{appName}" type="text" id="app-name-id">
-            <label for="app-notes-id">Apprentice Arms:</label>
-            <input th:field="*{notes}" type="text" id="app-notes-id">
-
+            <div class = "row mb-1">
+                <label for="app-name-id">Apprentice Name:</label>
+                <div class ="col-sm-4" >
+                    <input th:field="*{appName}" type="text" id="app-name-id">
+                </div>
+            </div>
+            <div class = "row mb-1">
+                <label for="app-notes-id">Apprentice Arms:</label>
+                <div class ="col-sm-4" >
+                    <input th:field="*{notes}" type="text" id="app-notes-id">
+                </div>
+            </div>
+            <!--hidden inputs that talk to the DB-->
             <input th:field="*{move}" type="text" hidden id="input-move">
             <input th:field="*{fight}" type="text" hidden id="input-fight">
             <input th:field="*{shoot}" type="text" hidden id="input-shoot">

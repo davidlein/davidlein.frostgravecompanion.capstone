@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="/webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css"/>
-<!--    <script defer th:src="@{/js/warband.js}"></script>-->
     <link th:href="@{/css/style.css}" rel="stylesheet" type ="text/css"/>
     <title>Warband Builder - Frostgrave Companion</title>
 </head>
@@ -16,11 +15,13 @@
 <body>
 <h2>Warband</h2>
 <hr>
-<a class="btn btn-primary m-2" th:href="@{/wizard_creator}">New Wizard</a>
-<a class="btn btn-primary m-2" th:href="@{/apprentice_creator}">New Apprentice</a>
-<a class="btn btn-primary m-2" th:href="@{/warband_creator}">Add Member</a>
+<a class="btn btn-primary btn-sm m-2" th:href="@{/wizard_creator}">New Wizard</a>
+<a class="btn btn-primary btn-sm m-2" th:href="@{/apprentice_creator}">New Apprentice</a>
+<a class="btn btn-primary btn-sm m-2" th:href="@{/warband_creator}">Add Member</a>
+<a class="btn btn-primary btn-sm m-2 justify-content-end" th:href="@{/venture_forth}">Venture Forth</a>
 <h3>Wizard and Apprentice</h3>
 <hr>
+<!--Wizard and Apprentice Tables-->
 <table class="table table-striped">
     <thead>
         <th>Name</th>
@@ -38,6 +39,7 @@
         <th>Actions</th>
     </thead>
     <tbody>
+<!--    Database Pull for Wizard-->
         <tr th:each="wizard:${wizard}">
             <td th:text="${wizard.wizName}"></td>
             <td th:text="${wizard.school}"></td>
@@ -52,12 +54,12 @@
             <td th:text="${wizard.treasury}"></td>
             <td th:text="${wizard.notes}"></td>
             <td>
+<!--                update and remove-->
                 <a th:href="@{/updateWizard(wizardId= ${wizard.wizardId})}" class = "btn btn-info ml-2">Update</a>
                 <a th:href="@{/removeWizard(wizardId = ${wizard.wizardId})}" class="btn btn-danger ml-2">Remove</a>
             </td>
-
-
         </tr>
+<!--    Database Pull for Apprentice-->
         <tr th:each="apprentice:${apprentice}">
             <td th:text="${apprentice.appName}"></td>
             <td>-</td>
@@ -72,6 +74,7 @@
             <td>-</td>
             <td th:text="${apprentice.notes}"></td>
             <td>
+<!--                update and remove-->
                 <a th:href="@{/updateApprentice(apprenticeId = ${apprentice.apprenticeId})}" class = "btn btn-info ml-2">Update</a>
                 <a th:href="@{/removeApprentice(apprenticeId = ${apprentice.apprenticeId})}" class="btn btn-danger ml-2">Remove</a>
             </td>
@@ -80,6 +83,7 @@
 </table>
 <h3>Soldiers</h3>
 <hr>
+<!--Soldier Table-->
 <table class="table table-striped">
     <thead>
         <tr>
@@ -96,6 +100,7 @@
         </tr>
     </thead>
     <tbody>
+<!--    Database Pull for Soldiers-->
         <tr th:each="warbands:${warbands}">
             <td th:text="${warbands.type}"></td>
             <td th:text="${warbands.move}"></td>
@@ -106,6 +111,7 @@
             <td th:text="${warbands.health}"></td>
             <td th:text="${warbands.notes}"></td>
             <td th:text="${warbands.specialist}"></td>
+<!--            remove-->
             <td><a th:href="@{/removeMember(warbandId = ${warbands.warbandId})}" class="btn btn-danger ml-2">Remove</a> </td>
         </tr>
     </tbody>

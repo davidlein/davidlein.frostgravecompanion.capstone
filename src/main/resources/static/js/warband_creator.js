@@ -51,6 +51,7 @@ const inputHealth = document.getElementById("input-health")
 const inputNotes = document.getElementById("input-notes")
 const inputSpecialist = document.getElementById("input-specialist")
 
+// Generates a small table NOT connected to the DB, but then takes those values and adds them to the DB
 function soldierSelectChange() {
 
     let soldierVal = document.getElementById("soldier-select-view").value.toLowerCase().replace(/\s/g, '')

@@ -54,8 +54,7 @@ public class WebSecurityConfig
                 .antMatchers("/warband","/base_vault","/warband_creator","/venture_forth").authenticated()
                 .anyRequest().permitAll()
                 .and()
-                .formLogin().usernameParameter("email").defaultSuccessUrl("/warband").permitAll().loginPage("/home")
-                .loginProcessingUrl("/doLogin")
+                .formLogin().usernameParameter("email").defaultSuccessUrl("/warband").permitAll().loginPage("/home").loginProcessingUrl("/doLogin")
                 .and()
                 .logout().logoutUrl("/logout").logoutSuccessUrl("/").permitAll();
         return http.build();

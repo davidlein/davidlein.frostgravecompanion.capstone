@@ -149,7 +149,18 @@ public class AppController
         return "redirect:/warband";
     }
 
-
+    @GetMapping("/venture_forth")
+    public ModelAndView ventureForth()
+    {
+        ModelAndView mav = new ModelAndView("venture_forth");
+        List<Wizard> wizList = wizardService.getWizard(wizardService.getPrincipal());
+        List<Apprentice> appList = wizardService.getApprentice((wizardService.getPrincipal()));
+        List<Warband> warbandList = wizardService.getWarband(wizardService.getPrincipal());
+        mav.addObject("warbands",warbandList);
+        mav.addObject("wizard",wizList);
+        mav.addObject("apprentice",appList);
+        return mav;
+    }
 
 
 
@@ -160,11 +171,7 @@ public class AppController
     {
         return "base_vault";
     }
-    @GetMapping("/venture_forth")
-    public String viewVentureForth()
-    {
-        return "venture_forth";
-    }
+
     @GetMapping("/register")
     public String showSignUpForm(Model model)
     {

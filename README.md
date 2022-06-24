@@ -1,6 +1,8 @@
 # davidlein.frostgravecompanion.capstone
 frostgrave companion app capstone
 
+(Base readme didn't like all the bullets and extra lines)
+
 A complete working application is due by Monday, 6/27/22, at midnight.
 Grading will be done through the case study development phase and conclude after the final presentation on Tuesday, 6/28/22, and Wednesday, 6/29/22. This will be done by appointment. 
 Your instructor will schedule practice presentation sessions before the final presentation during the case study development phase.

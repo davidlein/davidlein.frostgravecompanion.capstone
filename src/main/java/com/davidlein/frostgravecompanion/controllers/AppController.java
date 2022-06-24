@@ -1,5 +1,6 @@
 package com.davidlein.frostgravecompanion.controllers;
 
+import com.davidlein.frostgravecompanion.FrostgraveAppApplication;
 import com.davidlein.frostgravecompanion.models.*;
 import com.davidlein.frostgravecompanion.repositories.ApprenticeRepository;
 import com.davidlein.frostgravecompanion.repositories.UserRepository;
@@ -7,6 +8,8 @@ import com.davidlein.frostgravecompanion.repositories.WarbandRepository;
 import com.davidlein.frostgravecompanion.repositories.WizardRepository;
 import com.davidlein.frostgravecompanion.services.SpellService;
 import com.davidlein.frostgravecompanion.services.WizardService;
+import lombok.extern.java.Log;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -15,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @Controller
 public class AppController
@@ -187,4 +191,7 @@ public class AppController
         userRepo.save(user);
         return "register_success";
     }
+
+
+
 }

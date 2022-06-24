@@ -2,7 +2,10 @@ package com.davidlein.frostgravecompanion.controllers;
 
 import com.davidlein.frostgravecompanion.FrostgraveAppApplication;
 import com.davidlein.frostgravecompanion.models.*;
+<<<<<<< HEAD
+=======
 import com.davidlein.frostgravecompanion.repositories.ApprenticeRepository;
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 import com.davidlein.frostgravecompanion.repositories.UserRepository;
 import com.davidlein.frostgravecompanion.repositories.WarbandRepository;
 import com.davidlein.frostgravecompanion.repositories.WizardRepository;
@@ -14,7 +17,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+<<<<<<< HEAD
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+=======
 import org.springframework.web.bind.annotation.*;
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -34,9 +44,12 @@ public class AppController
     @Autowired
     private WarbandRepository warbandRepo;
 
+<<<<<<< HEAD
+=======
     @Autowired
     private ApprenticeRepository appRepo;
 
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
     @GetMapping("")
     public String viewStartPage()
     {
@@ -51,12 +64,17 @@ public class AppController
     public ModelAndView warband()
     {
         ModelAndView mav = new ModelAndView("warband");
+<<<<<<< HEAD
+        List<Warband> warbandList = wizardService.getWarband(wizardService.getPrincipal());
+        mav.addObject("warbands",warbandList);
+=======
         List<Wizard> wizList = wizardService.getWizard(wizardService.getPrincipal());
         List<Apprentice> appList = wizardService.getApprentice((wizardService.getPrincipal()));
         List<Warband> warbandList = wizardService.getWarband(wizardService.getPrincipal());
         mav.addObject("warbands",warbandList);
         mav.addObject("wizard",wizList);
         mav.addObject("apprentice",appList);
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
         return mav;
     }
     @GetMapping("/warband_creator")
@@ -72,6 +90,8 @@ public class AppController
         mav.addObject("warbands",newWarbandMember);
         return mav;
     }
+<<<<<<< HEAD
+=======
     @GetMapping("/wizard_creator")
     public ModelAndView addWizard(Model model)
     {
@@ -115,12 +135,15 @@ public class AppController
         mav.addObject("apprentice",apprentice);
         return mav;
     }
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
     @PostMapping("/save_member")
     public String saveMember(@ModelAttribute Warband warband)
     {
         warbandRepo.save(warband);
         return "redirect:/warband";
     }
+<<<<<<< HEAD
+=======
     @PostMapping("/save_wizard")
     public String saveMember(@ModelAttribute Wizard wizard)
     {
@@ -170,12 +193,21 @@ public class AppController
 
 
 
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
     @GetMapping("/base_vault")
     public String viewBaseVault()
     {
         return "base_vault";
     }
+<<<<<<< HEAD
+    @GetMapping("/venture_forth")
+    public String viewVentureForth()
+    {
+        return "venture_forth";
+    }
+=======
 
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
     @GetMapping("/register")
     public String showSignUpForm(Model model)
     {

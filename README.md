@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+# davidlein.frostgravecompanion.capstone
+frsotgrave companion app capstone
+=======
 # davidlein.frostgravecompanion.capstone
 frostgrave companion app capstone
 
@@ -51,3 +55,4 @@ Packages should be in all lowercase with each word separated by dots (.)
 Packages should include the name of your project and your name (e.g., “org.johndoe.myprojectname”)
 Each class should include comments to describe the class and the methods (see Java - JavaDoc discussion topic in Canvas)
 Have the project hosted on GitHub with a “readme” file documenting user stories and technical challenges along with how they were resolved.
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d

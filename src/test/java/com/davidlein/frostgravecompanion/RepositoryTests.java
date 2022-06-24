@@ -1,7 +1,16 @@
 package com.davidlein.frostgravecompanion;
 
+<<<<<<< HEAD
+import com.davidlein.frostgravecompanion.models.School;
+import com.davidlein.frostgravecompanion.models.Soldier;
+import com.davidlein.frostgravecompanion.models.User;
+import com.davidlein.frostgravecompanion.repositories.SchoolRepository;
+import com.davidlein.frostgravecompanion.repositories.SoldierRepository;
+import com.davidlein.frostgravecompanion.repositories.UserRepository;
+=======
 import com.davidlein.frostgravecompanion.models.*;
 import com.davidlein.frostgravecompanion.repositories.*;
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -25,12 +34,15 @@ public class RepositoryTests
     private SchoolRepository schoolRepo;
     @Autowired
     private SoldierRepository soldierRepo;
+<<<<<<< HEAD
+=======
     @Autowired
     private ApprenticeRepository appRepo;
     @Autowired
     private WizardRepository wizRepo;
     @Autowired
     private WarbandRepository warRepo;
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 
     @Autowired
     private TestEntityManager entityManager;
@@ -81,6 +93,8 @@ public class RepositoryTests
         System.out.println(soldier.get(1));
         System.out.println(soldier);
     }
+<<<<<<< HEAD
+=======
     @Test
     public void testFindApprentice()
     {
@@ -109,6 +123,7 @@ public class RepositoryTests
         System.out.println(warband);
     }
 
+>>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 
 
 

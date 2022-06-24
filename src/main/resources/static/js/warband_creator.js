@@ -16,38 +16,6 @@ class soldier
     }
 
 }
-<<<<<<< HEAD
-//Wizard and Apprentice
-const wizard = new soldier(16, "Wizard","6","+2","+0","10","+4","14","0",[""],false)
-const apprentice = new soldier(17, "Apprentice","6","+0","+0","10","+2","12","100",[""],false)
-=======
-
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
-//standard soldiers
-const thug = new soldier(1,"Thug", "6","+2","+0","10","-1","10","0",["Hand Weapon"],false)
-const thief = new soldier(2,"Thief", "7","+1","+0","10","+0","10","0",["Dagger"],false)
-const warhound = new soldier(3,"War Hound", "8","+1","+0","10","-2","8","10",["Animal"],false)
-const infantryman = new soldier(4,"Infantryman", "6","+3","+0","11","+0","10","50",["Two-Handed Weapon", " Light Armour"],false)
-const manatarms = new soldier(5,"Man-at-Arms", "6","+3","+0","12","+1","12","75",["Hand Weapon"," Shield"," Light Armour"],false)
-const apothecary = new soldier(6,"Apothecary", "6","+1","+0","10","+3","12","75",["Staff"," Healing Potion"],false)
-//specialist soldiers
-const archer = new soldier(7,"Archer", "6","+1","+2","11","+0","10","75",["Bow"," Quiver"," Dagger"," Light Armour"],true)
-const crossbowman = new soldier(8,"Crossbowman", "6","+1","+2","11","+0","10","75",["Crossbow"," Quiver"," Dagger"," Light Armour"],true)
-const treasurehunter = new soldier(9,"Treasure Hunter", "7","+3","+0","11","+2","12","100",["Hand Weapon"," Dagger"," Light Armour"],true)
-const tracker = new soldier(10,"Tracker", "7","+1","+2","11","+1","12","100",["Staff"," Bow"," Quiver"," Light Armour"],true)
-const knight = new soldier(11,"Knight", "5","+4","+0","13","+1","12","125",["Hand Weapon"," Dagger"," Shield"," Heavy Armour"],true)
-const templar = new soldier(12,"Templar", "5","+4","+0","12","+1","12","125",["Two-Handed Weapon", " Heavy Armour"],true)
-const ranger = new soldier(13,"Ranger", "7","+2","+2","11","+2","12","125",["Bow"," Quiver"," Hand Weapon"," Light Armour"],true)
-const barbarian = new soldier(14,"Barbarian", "6","+4","+0","10","+3","14","125",["Two-Handed Weapon", " Dagger"],true)
-const marksman = new soldier(15,"Marksman", "5","+2","+2","12","+1","12","125",["Crossbow"," Quiver"," Hand Weapon"," Heavy Armour"],true)
-
-//When the person presses the "soldier-submit" button. Take the value of "soldier-select" and build a table with the information contained within
-
-<<<<<<< HEAD
-let soldierObj ={wizard,apprentice,thug,thief,warhound, infantryman, manatarms, apothecary, archer, crossbowman, treasurehunter, tracker, knight, templar, ranger, barbarian, marksman}
-=======
-let soldierObj ={thug,thief,warhound, infantryman, manatarms, apothecary, archer, crossbowman, treasurehunter, tracker, knight, templar, ranger, barbarian, marksman}
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 
 document.getElementById("soldier-select-view").addEventListener("change",soldierSelectChange)
 const inputType = document.getElementById("input-type")
@@ -61,10 +29,9 @@ const inputHealth = document.getElementById("input-health")
 const inputNotes = document.getElementById("input-notes")
 const inputSpecialist = document.getElementById("input-specialist")
 
-<<<<<<< HEAD
-=======
+
 // Generates a small table NOT connected to the DB, but then takes those values and adds them to the DB
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
+
 function soldierSelectChange() {
 
     let soldierVal = document.getElementById("soldier-select-view").value.toLowerCase().replace(/\s/g, '')

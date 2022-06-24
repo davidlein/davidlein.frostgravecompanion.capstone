@@ -1,14 +1,14 @@
 package com.davidlein.frostgravecompanion.services;
 
 import com.davidlein.frostgravecompanion.models.*;
-<<<<<<< HEAD
+
 import com.davidlein.frostgravecompanion.repositories.SoldierRepository;
 import com.davidlein.frostgravecompanion.repositories.WarbandRepository;
 import com.davidlein.frostgravecompanion.repositories.WizardRepository;
 import com.davidlein.frostgravecompanion.repositories.UserRepository;
-=======
+
 import com.davidlein.frostgravecompanion.repositories.*;
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -29,13 +29,10 @@ public class WizardService implements UserDetailsService
     @Autowired
     private WarbandRepository warbandRepo;
     @Autowired
-<<<<<<< HEAD
-    private WizardRepository wizardRepo;
-=======
     private WizardRepository wizRepo;
     @Autowired
     private ApprenticeRepository appRepo;
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
+
 
 
     @Override
@@ -52,10 +49,10 @@ public class WizardService implements UserDetailsService
     {
         return userRepo.findByEmail(email);
     }
-<<<<<<< HEAD
-=======
+
+
 //    primary way to get a userId and assign it when doing CRUD operations
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
+
     public User getPrincipal()
     {
         return getByEmail(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -67,8 +64,7 @@ public class WizardService implements UserDetailsService
         warbands.forEach(warbandList::add);
         return warbandList;
     }
-<<<<<<< HEAD
-=======
+
     public List<Wizard> getWizard(User userId)
     {
         Iterable<Wizard> wizard = wizRepo.findAllByUserId(userId);
@@ -83,7 +79,7 @@ public class WizardService implements UserDetailsService
         apprentice.forEach(appList::add);
         return appList;
     }
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
+
     public List<Soldier> getSoldiers()
     {
         Iterable<Soldier> soldiers = this.soldierRepo.findAll();

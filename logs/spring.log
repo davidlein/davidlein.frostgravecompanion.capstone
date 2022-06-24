@@ -177,3 +177,276 @@
 2022-06-24 13:43:35.662  INFO 3220 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2022-06-24 13:43:35.667  INFO 3220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2022-06-24 13:43:35.670  INFO 3220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-24 15:20:08.351  INFO 4012 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Starting FrostgraveAppApplication using Java 18.0.1.1 on David-Desktop with PID 4012 (C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp\target\classes started by User in C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp)
+2022-06-24 15:20:08.352  INFO 4012 --- [restartedMain] c.d.f.FrostgraveAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 15:20:08.405  INFO 4012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-24 15:20:08.406  INFO 4012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-24 15:20:09.291  INFO 4012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 15:20:09.446  INFO 4012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 18 JPA repository interfaces.
+2022-06-24 15:20:10.198  INFO 4012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 15:20:10.208  INFO 4012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 15:20:10.209  INFO 4012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 15:20:10.321  INFO 4012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 15:20:10.322  INFO 4012 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1915 ms
+2022-06-24 15:20:10.472  WARN 4012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [452F4EEE23716F872E81587DE20CFBF2]
+2022-06-24 15:20:10.643  INFO 4012 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 15:20:10.686  INFO 4012 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-24 15:20:10.809  INFO 4012 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-24 15:20:10.894  INFO 4012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-24 15:20:10.947  INFO 4012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-24 15:20:10.960  INFO 4012 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-06-24 15:20:11.238  WARN 4012 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:20:11.238  WARN 4012 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:20:11.239  WARN 4012 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:20:11.239  WARN 4012 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:20:11.757  INFO 4012 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 15:20:11.765  INFO 4012 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:20:12.755  INFO 4012 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d25b8e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61bac66a, org.springframework.security.web.context.SecurityContextPersistenceFilter@68ab0389, org.springframework.security.web.header.HeaderWriterFilter@30005ba5, org.springframework.security.web.csrf.CsrfFilter@4d789788, org.springframework.security.web.authentication.logout.LogoutFilter@34128f97, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e7eab5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17a78e37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27a06001, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bb28af9, org.springframework.security.web.session.SessionManagementFilter@5f7e7b24, org.springframework.security.web.access.ExceptionTranslationFilter@4f9fea91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2eb5fa3d]
+2022-06-24 15:20:12.760  WARN 4012 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:20:12.761  INFO 4012 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-06-24 15:20:12.761  WARN 4012 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:20:12.761  INFO 4012 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-06-24 15:20:12.761  WARN 4012 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:20:12.761  INFO 4012 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-06-24 15:20:12.851  WARN 4012 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 15:20:13.366  INFO 4012 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-24 15:20:13.418  WARN 4012 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'appController' method 
+com.davidlein.frostgravecompanion.controllers.AppController#viewVentureForth()
+to {GET [/venture_forth]}: There is already 'appController' bean method
+com.davidlein.frostgravecompanion.controllers.AppController#ventureForth() mapped.
+2022-06-24 15:20:13.424  INFO 4012 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:20:13.427  INFO 4012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-24 15:20:13.430  INFO 4012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-24 15:20:13.433  INFO 4012 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-06-24 15:20:13.446  INFO 4012 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-06-24 15:20:13.483 ERROR 4012 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'appController' method 
+com.davidlein.frostgravecompanion.controllers.AppController#viewVentureForth()
+to {GET [/venture_forth]}: There is already 'appController' bean method
+com.davidlein.frostgravecompanion.controllers.AppController#ventureForth() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.0.jar:2.7.0]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.0.jar:2.7.0]
+	at com.davidlein.frostgravecompanion.FrostgraveAppApplication.main(FrostgraveAppApplication.java:17) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.0.jar:2.7.0]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'appController' method 
+com.davidlein.frostgravecompanion.controllers.AppController#viewVentureForth()
+to {GET [/venture_forth]}: There is already 'appController' bean method
+com.davidlein.frostgravecompanion.controllers.AppController#ventureForth() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205) ~[spring-webmvc-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.20.jar:5.3.20]
+	... 19 common frames omitted
+
+2022-06-24 15:23:39.108  INFO 23220 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Starting FrostgraveAppApplication using Java 18.0.1.1 on David-Desktop with PID 23220 (C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp\target\classes started by User in C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp)
+2022-06-24 15:23:39.109  INFO 23220 --- [restartedMain] c.d.f.FrostgraveAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 15:23:39.159  INFO 23220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-24 15:23:39.159  INFO 23220 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-24 15:23:39.866  INFO 23220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 15:23:39.982  INFO 23220 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 18 JPA repository interfaces.
+2022-06-24 15:23:40.671  INFO 23220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 15:23:40.678  INFO 23220 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 15:23:40.678  INFO 23220 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 15:23:40.788  INFO 23220 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 15:23:40.788  INFO 23220 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1628 ms
+2022-06-24 15:23:41.103  INFO 23220 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 15:23:41.144  INFO 23220 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-24 15:23:41.261  INFO 23220 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-24 15:23:41.353  INFO 23220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-24 15:23:41.403  INFO 23220 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-24 15:23:41.419  INFO 23220 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-06-24 15:23:41.733  WARN 23220 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:23:41.734  WARN 23220 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:23:41.734  WARN 23220 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:23:41.735  WARN 23220 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:23:42.241  INFO 23220 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 15:23:42.249  INFO 23220 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:23:43.232  INFO 23220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43774cc3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d5a51fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@f9b8e5, org.springframework.security.web.header.HeaderWriterFilter@9643d62, org.springframework.security.web.csrf.CsrfFilter@69377471, org.springframework.security.web.authentication.logout.LogoutFilter@6765d5e7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63e20afd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2384e6c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e774ccd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b9419b3, org.springframework.security.web.session.SessionManagementFilter@6160762f, org.springframework.security.web.access.ExceptionTranslationFilter@4b3de636, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51c3244e]
+2022-06-24 15:23:43.238  WARN 23220 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:23:43.238  INFO 23220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-06-24 15:23:43.239  WARN 23220 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:23:43.239  INFO 23220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-06-24 15:23:43.239  WARN 23220 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:23:43.239  INFO 23220 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-06-24 15:23:43.326  WARN 23220 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 15:23:43.801  INFO 23220 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-24 15:23:44.301  WARN 23220 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-06-24 15:23:44.667  INFO 23220 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 15:23:44.708  INFO 23220 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 15:23:44.721  INFO 23220 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Started FrostgraveAppApplication in 6.045 seconds (JVM running for 6.94)
+2022-06-24 15:23:44.725 ERROR 23220 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at ERROR level
+2022-06-24 15:23:44.725  WARN 23220 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at WARN level
+2022-06-24 15:23:44.725  INFO 23220 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at INFO level
+2022-06-24 15:23:51.350  INFO 23220 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-24 15:23:51.351  INFO 23220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-24 15:23:51.353  INFO 23220 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-24 15:26:22.059  INFO 23220 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:26:22.065  INFO 23220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-24 15:26:22.070  INFO 23220 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-24 15:26:26.658  INFO 7060 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Starting FrostgraveAppApplication using Java 18.0.1.1 on David-Desktop with PID 7060 (C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp\target\classes started by User in C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp)
+2022-06-24 15:26:26.660  INFO 7060 --- [restartedMain] c.d.f.FrostgraveAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 15:26:26.742  INFO 7060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-24 15:26:26.742  INFO 7060 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-24 15:26:27.612  INFO 7060 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 15:26:27.771  INFO 7060 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 145 ms. Found 18 JPA repository interfaces.
+2022-06-24 15:26:28.545  INFO 7060 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 15:26:28.551  INFO 7060 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 15:26:28.552  INFO 7060 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 15:26:28.673  INFO 7060 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 15:26:28.674  INFO 7060 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1931 ms
+2022-06-24 15:26:28.837  WARN 7060 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [1D992DA2BFE2C13644CC4D39DAB5BA29]
+2022-06-24 15:26:29.026  INFO 7060 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 15:26:29.073  INFO 7060 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-24 15:26:29.205  INFO 7060 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-24 15:26:29.297  INFO 7060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-24 15:26:29.353  INFO 7060 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-24 15:26:29.367  INFO 7060 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-06-24 15:26:29.731  WARN 7060 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:26:29.731  WARN 7060 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:26:29.732  WARN 7060 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:26:29.732  WARN 7060 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:26:30.263  INFO 7060 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 15:26:30.270  INFO 7060 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:26:31.274  INFO 7060 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@374eb877, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11e903d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@1424aa13, org.springframework.security.web.header.HeaderWriterFilter@236dfd98, org.springframework.security.web.csrf.CsrfFilter@4c5760c7, org.springframework.security.web.authentication.logout.LogoutFilter@3f9e7fd0, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7740d83f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a65d946, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b20902b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@264acb1f, org.springframework.security.web.session.SessionManagementFilter@45a4999, org.springframework.security.web.access.ExceptionTranslationFilter@3a05020b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@243b6db3]
+2022-06-24 15:26:31.279  WARN 7060 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:26:31.280  INFO 7060 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-06-24 15:26:31.280  WARN 7060 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:26:31.280  INFO 7060 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-06-24 15:26:31.280  WARN 7060 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:26:31.280  INFO 7060 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-06-24 15:26:31.370  WARN 7060 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 15:26:31.859  INFO 7060 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-24 15:26:32.394  WARN 7060 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-06-24 15:26:32.747  INFO 7060 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 15:26:32.789  INFO 7060 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 15:26:32.801  INFO 7060 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Started FrostgraveAppApplication in 6.602 seconds (JVM running for 7.769)
+2022-06-24 15:26:32.804 ERROR 7060 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at ERROR level
+2022-06-24 15:26:32.804  WARN 7060 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at WARN level
+2022-06-24 15:26:32.805  INFO 7060 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at INFO level
+2022-06-24 15:26:39.162  INFO 7060 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-24 15:26:39.163  INFO 7060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-24 15:26:39.164  INFO 7060 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-24 15:28:18.727  INFO 7060 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:28:18.731  INFO 7060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-24 15:28:18.734  INFO 7060 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-24 15:28:22.495  INFO 18608 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Starting FrostgraveAppApplication using Java 18.0.1.1 on David-Desktop with PID 18608 (C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp\target\classes started by User in C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp)
+2022-06-24 15:28:22.496  INFO 18608 --- [restartedMain] c.d.f.FrostgraveAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 15:28:22.549  INFO 18608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-24 15:28:22.550  INFO 18608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-24 15:28:23.295  INFO 18608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 15:28:23.427  INFO 18608 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 18 JPA repository interfaces.
+2022-06-24 15:28:24.201  INFO 18608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 15:28:24.209  INFO 18608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 15:28:24.209  INFO 18608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 15:28:24.322  INFO 18608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 15:28:24.323  INFO 18608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1772 ms
+2022-06-24 15:28:24.479  WARN 18608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [52ED03F83FEF9A6004071D1B2CDE8C3E]
+2022-06-24 15:28:24.683  INFO 18608 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 15:28:24.724  INFO 18608 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-24 15:28:24.856  INFO 18608 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-24 15:28:24.945  INFO 18608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-24 15:28:25.003  INFO 18608 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-24 15:28:25.016  INFO 18608 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-06-24 15:28:25.304  WARN 18608 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:28:25.305  WARN 18608 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:28:25.305  WARN 18608 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:28:25.305  WARN 18608 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:28:25.842  INFO 18608 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 15:28:25.851  INFO 18608 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:28:26.830  INFO 18608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@715dbbcb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@525e4658, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bd5498d, org.springframework.security.web.header.HeaderWriterFilter@56df8aff, org.springframework.security.web.csrf.CsrfFilter@ed97a09, org.springframework.security.web.authentication.logout.LogoutFilter@33428d96, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@33904c0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@653e21d2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44695d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7429a047, org.springframework.security.web.session.SessionManagementFilter@5d0e3a46, org.springframework.security.web.access.ExceptionTranslationFilter@b18260e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@550954e7]
+2022-06-24 15:28:26.835  WARN 18608 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:28:26.835  INFO 18608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-06-24 15:28:26.835  WARN 18608 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:28:26.835  INFO 18608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-06-24 15:28:26.835  WARN 18608 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:28:26.835  INFO 18608 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-06-24 15:28:26.938  WARN 18608 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 15:28:27.519  INFO 18608 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-24 15:28:28.090  WARN 18608 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-06-24 15:28:28.480  INFO 18608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 15:28:28.525  INFO 18608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 15:28:28.538  INFO 18608 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Started FrostgraveAppApplication in 6.425 seconds (JVM running for 7.276)
+2022-06-24 15:28:28.541 ERROR 18608 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at ERROR level
+2022-06-24 15:28:28.542  WARN 18608 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at WARN level
+2022-06-24 15:28:28.542  INFO 18608 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at INFO level
+2022-06-24 15:28:42.172  INFO 18608 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-24 15:28:42.172  INFO 18608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-24 15:28:42.173  INFO 18608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-06-24 15:30:22.375  INFO 18608 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:30:22.379  INFO 18608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-24 15:30:22.382  INFO 18608 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-06-24 15:30:26.312  INFO 24056 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Starting FrostgraveAppApplication using Java 18.0.1.1 on David-Desktop with PID 24056 (C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp\target\classes started by User in C:\Users\User\Desktop\Homework\JAVA\IntelliJ MOdules\FrostgraveApp)
+2022-06-24 15:30:26.314  INFO 24056 --- [restartedMain] c.d.f.FrostgraveAppApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-06-24 15:30:26.369  INFO 24056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-06-24 15:30:26.369  INFO 24056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-06-24 15:30:27.093  INFO 24056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-24 15:30:27.214  INFO 24056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 18 JPA repository interfaces.
+2022-06-24 15:30:27.913  INFO 24056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-06-24 15:30:27.923  INFO 24056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-06-24 15:30:27.923  INFO 24056 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-06-24 15:30:28.048  INFO 24056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-06-24 15:30:28.049  INFO 24056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1680 ms
+2022-06-24 15:30:28.204  WARN 24056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [E2AC7BA60593C2EFC0A1A3AA9BF7F24D]
+2022-06-24 15:30:28.373  INFO 24056 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-24 15:30:28.415  INFO 24056 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-24 15:30:28.544  INFO 24056 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-24 15:30:28.633  INFO 24056 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-24 15:30:28.686  INFO 24056 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-24 15:30:28.699  INFO 24056 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+2022-06-24 15:30:28.988  WARN 24056 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:30:28.988  WARN 24056 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.SpellRollPK
+2022-06-24 15:30:28.990  WARN 24056 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000038: Composite-id class does not override equals(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:30:28.990  WARN 24056 --- [restartedMain] org.hibernate.mapping.RootClass          : HHH000039: Composite-id class does not override hashCode(): com.davidlein.frostgravecompanion.models.PotionRollPK
+2022-06-24 15:30:29.521  INFO 24056 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-24 15:30:29.531  INFO 24056 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:30:30.582  INFO 24056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7d25b8e9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61bac66a, org.springframework.security.web.context.SecurityContextPersistenceFilter@68ab0389, org.springframework.security.web.header.HeaderWriterFilter@30005ba5, org.springframework.security.web.csrf.CsrfFilter@4d789788, org.springframework.security.web.authentication.logout.LogoutFilter@34128f97, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@e7eab5a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17a78e37, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27a06001, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bb28af9, org.springframework.security.web.session.SessionManagementFilter@5f7e7b24, org.springframework.security.web.access.ExceptionTranslationFilter@4f9fea91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2eb5fa3d]
+2022-06-24 15:30:30.589  WARN 24056 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/images/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:30:30.589  INFO 24056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/images/**']
+2022-06-24 15:30:30.590  WARN 24056 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:30:30.590  INFO 24056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/js/**']
+2022-06-24 15:30:30.590  WARN 24056 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Ant [pattern='/webjars/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2022-06-24 15:30:30.590  INFO 24056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Ant [pattern='/webjars/**']
+2022-06-24 15:30:30.692  WARN 24056 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-24 15:30:31.182  INFO 24056 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-06-24 15:30:31.740  WARN 24056 --- [restartedMain] org.thymeleaf.templatemode.TemplateMode  : [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2022-06-24 15:30:32.115  INFO 24056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-06-24 15:30:32.166  INFO 24056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-06-24 15:30:32.179  INFO 24056 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Started FrostgraveAppApplication in 6.28 seconds (JVM running for 7.168)
+2022-06-24 15:30:32.185 ERROR 24056 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at ERROR level
+2022-06-24 15:30:32.186  WARN 24056 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at WARN level
+2022-06-24 15:30:32.186  INFO 24056 --- [restartedMain] c.d.f.FrostgraveAppApplication           : Message logged at INFO level
+2022-06-24 15:30:36.731  INFO 24056 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-06-24 15:30:36.731  INFO 24056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-06-24 15:30:36.733  INFO 24056 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-06-24 15:30:43.243  INFO 24056 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-24 15:30:43.246  INFO 24056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-24 15:30:43.251  INFO 24056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

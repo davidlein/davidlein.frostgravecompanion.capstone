@@ -12,32 +12,17 @@ public class Wizard
 {
     @Id
     @Column(name="wizard_id")
-<<<<<<< HEAD
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long wizardId;
 
     @Column(name="wiz_name")
     private String wizName;
 
-    @Column(name="apprentice_name")
-    private String apprenticeName;
-
-    @OneToOne
-    @JoinColumn(name="school_id_fk",referencedColumnName = "school_id")
-    School schoolId;
-=======
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private Long wizardId;
-
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
 
     @ManyToOne
     @JoinColumn (name="user_id_fk",referencedColumnName = "user_id")
     private User userId;
 
-<<<<<<< HEAD
-=======
-    @Column(name="wiz_name")
-    private String wizName;
 
     @Column(name="school")
     private String school;
@@ -45,20 +30,13 @@ public class Wizard
     @Column(name="xp")
     private Long xp;
 
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
     @Column(name="level")
     private Long level;
 
     @Column(name="treasury")
     private Long treasury;
 
-<<<<<<< HEAD
-    @ManyToMany(targetEntity = SpellList.class)
-    @JoinTable(	name = "wizard_spells", joinColumns = { @JoinColumn(name = "spell_list_fk") },
-            inverseJoinColumns = { @JoinColumn(name = "spell_id") })
-    private List<SpellList> spellList;
 
-=======
     @Column (name="move")
     private Long move;
 
@@ -79,6 +57,6 @@ public class Wizard
 
     @Column(name="notes")
     private String notes;
->>>>>>> 23d8b0d975b91acbe40e5e1c5bbd0ea4a7d8295d
+
 
 }
